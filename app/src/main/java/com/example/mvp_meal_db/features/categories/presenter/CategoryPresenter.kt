@@ -24,6 +24,7 @@ class CategoryPresenter(private var view: ICommonView, private val dao: Category
             }
         } catch (e: Exception) {
             withContext(Dispatchers.Main) {
+                view.showMessage("Error Fetching Categories")
                 Log.e("===>", "Error Fetching Categories", e)
             }
         }
