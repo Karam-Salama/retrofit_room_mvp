@@ -22,7 +22,7 @@ class FavoritePresenter(private var view: ICommonView, private val dao: Category
             }
         } catch (e: Exception) {
             withContext(Dispatchers.Main) {
-                Log.e("===>", "Error Fetching Categories", e)
+                Log.e("===>", "Error Fetching Favorites", e)
             }
         }
     }
